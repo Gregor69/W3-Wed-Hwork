@@ -23,13 +23,12 @@ body {
 }
 
 .order {
-    display: grid;
     width: 20vw;
     height: 20vw;
     background-color: wheat;
     padding: 10px;
     margin:20px;
-    grid-template-columns: 7fr 7fr;
+    
 }
 
 .order p, i{
