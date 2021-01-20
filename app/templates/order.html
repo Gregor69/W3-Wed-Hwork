@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>{{ title }} - Orders</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="navLink"><a href="/orders">Home</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <h1>{{order.name}}'s Sarnies</h1>
+
+    <div class="order-container">
+
+        <div class="order">
+            <h2>{{ order.customer }}</h2>
+            <h3>{{ order.sandwich}}</h3>
+            <h4>Quantity: {{ order.quantity }}</h4>
+            <h5>{{ order.date}} </h5>
+        </div>
+    </div>
+</body>
+
+</html>

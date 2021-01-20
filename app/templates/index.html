@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    
+    
+    <title> {{ title }} - Order List</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="navLink"><a href="/orders">Home</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <h1>Super Sarnies</h1>
+    <h2>Orders</h2>
+
+    <div class="order-container">
+        {% for order in orders %}
+        <div class="order">
+            <h2>{{ order.customer }}</h2>
+            <h3>{{ order.sandwich}}</h3>
+            <h4>Quantity: {{ order.quantity }}</h4>
+            <h5>{{ order.date}} </h5>
+          <a href="/orders/{{orders.index(order)}}">Show Order</a>
+        </div>
+        {% endfor %}
+      </div>
+    
+    
+</body>
+</html>
